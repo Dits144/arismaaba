@@ -46,22 +46,19 @@ function formatDate(dateString: string) {
 
 export function ArticlesSection() {
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[150px]" />
-      
-      <div className="container px-4 relative z-10">
+    <section className="py-16 md:py-24">
+      <div className="container px-4">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
           <div>
             <h2 className="section-title">
-              Artikel <span className="text-gradient-neon">Terbaru</span>
+              Artikel Terbaru
             </h2>
             <p className="section-subtitle">
               Baca artikel dan informasi seputar kegiatan keislaman
             </p>
           </div>
-          <Button asChild variant="ghost" className="text-primary hover:text-primary/80 group hover:bg-primary/10">
+          <Button asChild variant="ghost" className="text-accent hover:text-accent/80 group hover:bg-accent/10">
             <Link to="/artikel">
               Lihat Semua
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -78,23 +75,23 @@ export function ArticlesSection() {
               className="animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <Card className="bg-card h-full overflow-hidden group shadow-card rounded-xl">
+              <Card className="content-card h-full overflow-hidden group">
                 {/* Thumbnail Placeholder */}
-                <div className="aspect-video bg-gradient-to-br from-blue-custom-deep/80 via-blue-custom-teal/60 to-blue-custom-dark/70 flex items-center justify-center relative overflow-hidden">
+                <div className="aspect-video bg-gradient-to-br from-secondary via-accent to-primary flex items-center justify-center">
                   <Tag className="h-12 w-12 text-white/60" />
                 </div>
                 <CardContent className="p-5">
-                  <Badge variant="outline" className="mb-3 border-blue-custom-teal text-blue-custom-teal">
+                  <Badge variant="outline" className="mb-3 border-accent text-accent">
                     {article.category}
                   </Badge>
-                  <h3 className="font-display text-lg font-semibold text-card-foreground mb-2 group-hover:text-blue-custom-teal transition-colors line-clamp-2">
+                  <h3 className="font-display text-lg font-semibold text-card-foreground mb-2 group-hover:text-accent transition-colors line-clamp-2">
                     {article.title}
                   </h3>
                   <p className="text-sm text-card-foreground/70 mb-3 line-clamp-2">
                     {article.excerpt}
                   </p>
                   <div className="flex items-center gap-2 text-sm text-card-foreground/60">
-                    <Clock className="h-4 w-4 text-blue-custom-teal" />
+                    <Clock className="h-4 w-4 text-accent" />
                     <span>{formatDate(article.published_at)}</span>
                   </div>
                 </CardContent>
