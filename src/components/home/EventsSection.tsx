@@ -79,36 +79,35 @@ export function EventsSection() {
               className="animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <Card className="glass-card h-full overflow-hidden group border-border/30">
+              <Card className="bg-card h-full overflow-hidden group shadow-card rounded-xl">
                 {/* Poster Placeholder */}
-                <div className="aspect-video bg-gradient-to-br from-primary/20 via-secondary/15 to-muted/30 flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-50" />
-                  <Calendar className="h-12 w-12 text-primary/50" />
+                <div className="aspect-video bg-gradient-to-br from-blue-custom-deep/80 via-blue-custom-teal/60 to-blue-custom-dark/70 flex items-center justify-center relative overflow-hidden">
+                  <Calendar className="h-12 w-12 text-white/60" />
                 </div>
                 <CardContent className="p-5">
                   <Badge
                     variant={isUpcoming(event.start_date) ? "default" : "secondary"}
                     className={`mb-3 ${
                       isUpcoming(event.start_date)
-                        ? "bg-primary text-primary-foreground"
+                        ? "bg-blue-custom-teal text-white"
                         : "bg-muted text-muted-foreground"
                     }`}
                   >
                     {isUpcoming(event.start_date) ? "Akan Datang" : "Selesai"}
                   </Badge>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                  <h3 className="font-display text-lg font-semibold text-card-foreground mb-2 group-hover:text-blue-custom-teal transition-colors line-clamp-2">
                     {event.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+                  <p className="text-sm text-card-foreground/70 mb-3 line-clamp-2">
                     {event.description}
                   </p>
-                  <div className="flex flex-col gap-1 text-sm text-muted-foreground">
+                  <div className="flex flex-col gap-1 text-sm text-card-foreground/60">
                     <div className="flex items-center gap-2">
-                      <Calendar className="h-4 w-4 text-primary" />
+                      <Calendar className="h-4 w-4 text-blue-custom-teal" />
                       <span>{formatDate(event.start_date)}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4 text-primary" />
+                      <MapPin className="h-4 w-4 text-blue-custom-teal" />
                       <span className="line-clamp-1">{event.location}</span>
                     </div>
                   </div>

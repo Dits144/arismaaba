@@ -88,9 +88,9 @@ export function HeroSection() {
             ].map((stat) => (
               <div 
                 key={stat.label} 
-                className="text-center p-4 md:p-6 rounded-2xl glass-card"
+                className="text-center p-4 md:p-6 rounded-2xl bg-card shadow-card"
               >
-                <div className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-primary">
+                <div className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-blue-custom-deep">
                   {stat.value}
                 </div>
                 <div className="text-xs md:text-sm text-muted-foreground mt-1">{stat.label}</div>
