@@ -6,119 +6,131 @@
 
 @layer base {
   :root {
-    /* ARISMA Theme - Light Mode */
-    --background: 0 0% 96%;
-    --foreground: 212 74% 18%;
+    /* ARISMA Theme - Light Mode with Neon Accents */
+    --background: 210 25% 97%;
+    --foreground: 212 74% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 212 74% 18%;
+    --card-foreground: 212 74% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 212 74% 18%;
+    --popover-foreground: 212 74% 15%;
 
     --primary: 212 74% 18%;
-    --primary-foreground: 0 0% 96%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 212 58% 25%;
-    --secondary-foreground: 0 0% 96%;
+    --secondary: 197 56% 27%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 20% 90%;
-    --muted-foreground: 212 40% 40%;
+    --muted: 210 20% 92%;
+    --muted-foreground: 212 30% 45%;
 
-    --accent: 43 60% 50%;
-    --accent-foreground: 212 74% 18%;
+    --accent: 160 100% 40%;
+    --accent-foreground: 212 74% 10%;
 
-    --destructive: 0 70% 45%;
+    --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 85%;
-    --input: 210 20% 90%;
-    --ring: 43 60% 50%;
+    --border: 210 20% 88%;
+    --input: 210 20% 92%;
+    --ring: 160 100% 40%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens */
-    --gold: 43 60% 50%;
-    --gold-light: 43 55% 65%;
-    --gold-dark: 43 65% 35%;
+    /* Neon tokens */
+    --neon-primary: 160 100% 45%;
+    --neon-secondary: 197 100% 50%;
+    --neon-tertiary: 280 100% 65%;
+    --gold: 43 80% 55%;
+    --gold-light: 43 70% 65%;
+    --gold-dark: 43 85% 40%;
     
     --blue-deep: 212 74% 18%;
     --blue-dark: 212 58% 25%;
     --blue-teal: 197 56% 27%;
     --blue-light: 197 50% 45%;
     
-    --islamic-pattern: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230C2B4E' fill-opacity='0.04'%3E%3Cpath d='M30 0l30 30-30 30L0 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    --islamic-pattern: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230C2B4E' fill-opacity='0.03'%3E%3Cpath d='M30 0l30 30-30 30L0 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     
     /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(43 60% 50%) 0%, hsl(43 65% 35%) 100%);
+    --gradient-neon: linear-gradient(135deg, hsl(160 100% 45%) 0%, hsl(197 100% 50%) 50%, hsl(280 100% 65%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(43 80% 55%) 0%, hsl(43 85% 40%) 100%);
     --gradient-primary: linear-gradient(180deg, hsl(212 74% 18%) 0%, hsl(212 58% 25%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 96%) 0%, hsl(210 20% 92%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 20% 97%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(210 25% 97%) 0%, hsl(210 20% 94%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
 
-    /* Shadows */
-    --shadow-gold: 0 4px 20px -2px hsla(43, 60%, 50%, 0.25);
-    --shadow-card: 0 4px 24px -4px hsla(212, 74%, 18%, 0.1);
-    --shadow-elevated: 0 8px 32px -8px hsla(212, 74%, 18%, 0.15);
+    /* Neon Shadows */
+    --shadow-neon: 0 0 20px hsla(160, 100%, 45%, 0.4), 0 0 40px hsla(160, 100%, 45%, 0.2);
+    --shadow-neon-sm: 0 0 10px hsla(160, 100%, 45%, 0.3);
+    --shadow-gold: 0 4px 20px -2px hsla(43, 80%, 55%, 0.35);
+    --shadow-card: 0 4px 24px -4px hsla(212, 74%, 18%, 0.08);
+    --shadow-elevated: 0 8px 32px -8px hsla(212, 74%, 18%, 0.12);
 
     /* Sidebar */
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 212 74% 18%;
-    --sidebar-primary: 43 60% 50%;
-    --sidebar-primary-foreground: 212 74% 18%;
-    --sidebar-accent: 210 20% 95%;
+    --sidebar-primary: 160 100% 40%;
+    --sidebar-primary-foreground: 212 74% 10%;
+    --sidebar-accent: 210 20% 96%;
     --sidebar-accent-foreground: 212 74% 18%;
-    --sidebar-border: 210 20% 85%;
-    --sidebar-ring: 43 60% 50%;
+    --sidebar-border: 210 20% 88%;
+    --sidebar-ring: 160 100% 40%;
   }
 
   .dark {
-    /* ARISMA Theme - Dark Mode */
-    --background: 212 74% 18%;
+    /* ARISMA Theme - Dark Mode with Neon Glow */
+    --background: 220 25% 8%;
     --foreground: 0 0% 96%;
 
-    --card: 212 58% 25%;
+    --card: 220 25% 12%;
     --card-foreground: 0 0% 96%;
 
-    --popover: 212 65% 20%;
+    --popover: 220 25% 10%;
     --popover-foreground: 0 0% 96%;
 
-    --primary: 197 56% 27%;
-    --primary-foreground: 0 0% 96%;
+    --primary: 160 100% 45%;
+    --primary-foreground: 220 25% 8%;
 
-    --secondary: 212 58% 30%;
-    --secondary-foreground: 0 0% 96%;
+    --secondary: 197 100% 50%;
+    --secondary-foreground: 220 25% 8%;
 
-    --muted: 212 50% 22%;
-    --muted-foreground: 210 20% 70%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 210 15% 60%;
 
-    --accent: 43 60% 50%;
-    --accent-foreground: 212 74% 18%;
+    --accent: 160 100% 50%;
+    --accent-foreground: 220 25% 8%;
 
-    --destructive: 0 70% 45%;
+    --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 212 50% 28%;
-    --input: 212 50% 22%;
-    --ring: 43 60% 50%;
+    --border: 220 20% 20%;
+    --input: 220 20% 15%;
+    --ring: 160 100% 50%;
 
-    /* Custom tokens dark */
-    --islamic-pattern: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23b69d5d' fill-opacity='0.03'%3E%3Cpath d='M30 0l30 30-30 30L0 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    /* Neon tokens dark */
+    --neon-primary: 160 100% 50%;
+    --neon-secondary: 197 100% 55%;
+    --neon-tertiary: 280 100% 70%;
     
-    --gradient-hero: linear-gradient(180deg, hsl(212 74% 18%) 0%, hsl(212 58% 22%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(212 58% 27%) 0%, hsl(212 58% 22%) 100%);
+    --islamic-pattern: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300ff88' fill-opacity='0.02'%3E%3Cpath d='M30 0l30 30-30 30L0 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    
+    --gradient-hero: linear-gradient(180deg, hsl(220 25% 8%) 0%, hsl(220 25% 6%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 25% 14%) 0%, hsl(220 25% 10%) 100%);
 
-    --shadow-card: 0 4px 24px -4px hsla(0, 0%, 0%, 0.4);
-    --shadow-elevated: 0 8px 32px -8px hsla(0, 0%, 0%, 0.5);
+    --shadow-neon: 0 0 25px hsla(160, 100%, 50%, 0.5), 0 0 50px hsla(160, 100%, 50%, 0.25);
+    --shadow-neon-sm: 0 0 15px hsla(160, 100%, 50%, 0.4);
+    --shadow-card: 0 4px 24px -4px hsla(0, 0%, 0%, 0.5);
+    --shadow-elevated: 0 8px 32px -8px hsla(0, 0%, 0%, 0.6);
 
     /* Sidebar dark */
-    --sidebar-background: 212 58% 25%;
+    --sidebar-background: 220 25% 12%;
     --sidebar-foreground: 0 0% 96%;
-    --sidebar-primary: 43 60% 50%;
-    --sidebar-primary-foreground: 212 74% 18%;
-    --sidebar-accent: 212 50% 28%;
+    --sidebar-primary: 160 100% 50%;
+    --sidebar-primary-foreground: 220 25% 8%;
+    --sidebar-accent: 220 20% 18%;
     --sidebar-accent-foreground: 0 0% 96%;
-    --sidebar-border: 212 50% 28%;
-    --sidebar-ring: 43 60% 50%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 160 100% 50%;
   }
 }
 
@@ -144,8 +156,19 @@
 }
 
 @layer components {
+  .text-gradient-neon {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-neon);
+  }
+
   .text-gradient-gold {
-    @apply bg-gradient-to-r from-accent to-accent/80 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent;
+  }
+
+  .border-gradient-neon {
+    border: 2px solid transparent;
+    background: linear-gradient(hsl(var(--background)), hsl(var(--background))) padding-box,
+                var(--gradient-neon) border-box;
   }
 
   .border-gradient-gold {
@@ -162,6 +185,18 @@
     @apply bg-card/80 backdrop-blur-md border border-border/50;
   }
 
+  .neon-glow {
+    box-shadow: var(--shadow-neon);
+  }
+
+  .neon-glow-sm {
+    box-shadow: var(--shadow-neon-sm);
+  }
+
+  .neon-text {
+    text-shadow: 0 0 10px hsl(var(--accent)), 0 0 20px hsl(var(--accent)), 0 0 40px hsl(var(--accent));
+  }
+
   .hero-glow {
     position: relative;
   }
@@ -172,9 +207,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 120%;
-    height: 120%;
-    background: radial-gradient(ellipse at center, hsla(43, 60%, 50%, 0.08) 0%, transparent 70%);
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(ellipse at center, hsla(160, 100%, 50%, 0.08) 0%, hsla(197, 100%, 50%, 0.04) 30%, transparent 70%);
     pointer-events: none;
     z-index: -1;
   }
@@ -185,7 +220,7 @@
 
   .card-hover:hover {
     @apply -translate-y-1;
-    box-shadow: var(--shadow-elevated);
+    box-shadow: var(--shadow-elevated), var(--shadow-neon-sm);
   }
 
   .nav-link {
@@ -195,6 +230,7 @@
   .nav-link::after {
     content: '';
     @apply absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+    box-shadow: var(--shadow-neon-sm);
   }
 
   .nav-link:hover::after {
@@ -209,6 +245,25 @@
   .section-subtitle {
     @apply text-lg text-muted-foreground max-w-2xl;
   }
+
+  .btn-neon {
+    @apply bg-accent text-accent-foreground font-semibold transition-all duration-300;
+    box-shadow: var(--shadow-neon-sm);
+  }
+
+  .btn-neon:hover {
+    box-shadow: var(--shadow-neon);
+    @apply scale-105;
+  }
+
+  .card-neon {
+    @apply bg-card border border-border rounded-xl transition-all duration-300;
+  }
+
+  .card-neon:hover {
+    @apply border-accent/50;
+    box-shadow: var(--shadow-neon-sm);
+  }
 }
 
 @layer utilities {
@@ -222,6 +277,10 @@
 
   .animate-scale-in {
     animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  .animate-glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite;
   }
 
   @keyframes fadeIn {
@@ -248,6 +307,15 @@
     to { 
       opacity: 1; 
       transform: scale(1); 
+    }
+  }
+
+  @keyframes glowPulse {
+    0%, 100% {
+      box-shadow: 0 0 20px hsla(160, 100%, 50%, 0.4), 0 0 40px hsla(160, 100%, 50%, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 30px hsla(160, 100%, 50%, 0.6), 0 0 60px hsla(160, 100%, 50%, 0.3);
     }
   }
 }

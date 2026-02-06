@@ -50,17 +50,19 @@ function isUpcoming(dateString: string) {
 
 export function EventsSection() {
   return (
-    <section className="py-16 md:py-24 bg-card">
+    <section className="py-16 md:py-24 bg-card/50">
       <div className="container px-4">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
           <div>
-            <h2 className="section-title">Kegiatan Terdekat</h2>
+            <h2 className="section-title">
+              <span className="text-gradient-neon">Kegiatan</span> Terdekat
+            </h2>
             <p className="section-subtitle">
               Ikuti berbagai kegiatan menarik yang kami selenggarakan
             </p>
           </div>
-          <Button asChild variant="ghost" className="text-accent hover:text-accent/80 group">
+          <Button asChild variant="ghost" className="text-accent hover:text-accent/80 group hover:bg-accent/10">
             <Link to="/kegiatan">
               Lihat Semua
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -77,17 +79,18 @@ export function EventsSection() {
               className="animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <Card className="card-hover h-full bg-secondary/50 border-border/50 overflow-hidden group">
+              <Card className="card-neon h-full overflow-hidden group">
                 {/* Poster Placeholder */}
-                <div className="aspect-video bg-gradient-to-br from-primary/30 to-accent/20 flex items-center justify-center">
-                  <Calendar className="h-12 w-12 text-accent/50" />
+                <div className="aspect-video bg-gradient-to-br from-accent/20 via-secondary/20 to-primary/30 flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-50" />
+                  <Calendar className="h-12 w-12 text-accent/60" />
                 </div>
                 <CardContent className="p-5">
                   <Badge
                     variant={isUpcoming(event.start_date) ? "default" : "secondary"}
                     className={`mb-3 ${
                       isUpcoming(event.start_date)
-                        ? "bg-accent text-accent-foreground"
+                        ? "bg-accent text-accent-foreground neon-glow-sm"
                         : "bg-muted text-muted-foreground"
                     }`}
                   >

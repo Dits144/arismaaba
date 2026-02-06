@@ -46,17 +46,22 @@ function formatDate(dateString: string) {
 
 export function ArticlesSection() {
   return (
-    <section className="py-16 md:py-24">
-      <div className="container px-4">
+    <section className="py-16 md:py-24 relative overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px]" />
+      
+      <div className="container px-4 relative z-10">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
           <div>
-            <h2 className="section-title">Artikel Terbaru</h2>
+            <h2 className="section-title">
+              Artikel <span className="text-gradient-neon">Terbaru</span>
+            </h2>
             <p className="section-subtitle">
               Baca artikel dan informasi seputar kegiatan keislaman
             </p>
           </div>
-          <Button asChild variant="ghost" className="text-accent hover:text-accent/80 group">
+          <Button asChild variant="ghost" className="text-accent hover:text-accent/80 group hover:bg-accent/10">
             <Link to="/artikel">
               Lihat Semua
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -73,10 +78,11 @@ export function ArticlesSection() {
               className="animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <Card className="card-hover h-full bg-card border-border/50 overflow-hidden group">
+              <Card className="card-neon h-full overflow-hidden group">
                 {/* Thumbnail Placeholder */}
-                <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/30 flex items-center justify-center">
-                  <Tag className="h-12 w-12 text-accent/50" />
+                <div className="aspect-video bg-gradient-to-br from-secondary/30 via-accent/20 to-primary/30 flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-50" />
+                  <Tag className="h-12 w-12 text-accent/60" />
                 </div>
                 <CardContent className="p-5">
                   <Badge variant="outline" className="mb-3 border-accent/50 text-accent">

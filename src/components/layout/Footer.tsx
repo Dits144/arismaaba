@@ -1,20 +1,27 @@
 import { Link } from "react-router-dom";
 import { Instagram, Mail, Phone, MapPin } from "lucide-react";
-import logoArisma from "@/assets/logo-arisma.png";
+import { useTheme } from "next-themes";
+import logoDark from "@/assets/logo-dark.png";
+import logoLight from "@/assets/logo-light.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const { resolvedTheme } = useTheme();
+  const currentLogo = resolvedTheme === "dark" ? logoDark : logoLight;
 
   return (
-    <footer className="bg-card border-t border-border">
-      <div className="container mx-auto px-4 py-12 md:py-16">
+    <footer className="bg-card border-t border-border/50 relative overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-accent/5 rounded-full blur-[100px]" />
+      
+      <div className="container mx-auto px-4 py-12 md:py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-3">
-              <img src={logoArisma} alt="ARISMA" className="h-12 w-auto" />
+            <Link to="/" className="flex items-center gap-3 group">
+              <img src={currentLogo} alt="ARISMA" className="h-12 w-auto transition-transform duration-300 group-hover:scale-105" />
               <div>
-                <span className="block text-xl font-display font-bold text-accent">
+                <span className="block text-xl font-display font-bold text-accent neon-text">
                   ARISMA
                 </span>
                 <span className="block text-xs text-muted-foreground">
@@ -95,7 +102,7 @@ export function Footer() {
                 href="https://instagram.com/arisma_aba"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:shadow-[0_0_15px_hsla(160,100%,50%,0.4)]"
               >
                 <Instagram className="h-5 w-5" />
               </a>
@@ -107,7 +114,7 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-border">
+        <div className="mt-12 pt-8 border-t border-border/50">
           <p className="text-center text-sm text-muted-foreground">
             © {currentYear} ARISMA - Aktivitas Remaja Islam Masjid 'Amru Bin 'Ash.
             <br className="sm:hidden" />
