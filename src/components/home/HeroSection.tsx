@@ -10,14 +10,9 @@ export function HeroSection() {
   const currentLogo = resolvedTheme === "dark" ? logoDark : logoLight;
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden hero-glow mosque-bg">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-[image:var(--gradient-hero)]" />
-      
-      {/* Subtle Glow Elements */}
-      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/15 rounded-full blur-[100px]" />
-      <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[120px]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/8 rounded-full blur-[150px]" />
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden mosque-bg">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/20" />
 
       <div className="container relative z-10 px-4 py-20 md:py-32">
         <div className="max-w-4xl mx-auto text-center space-y-8">
@@ -26,7 +21,7 @@ export function HeroSection() {
             <img
               src={currentLogo}
               alt="ARISMA - Aktivitas Remaja Islam Masjid 'Amru Bin 'Ash"
-              className="h-32 md:h-40 lg:h-52 w-auto drop-shadow-2xl"
+              className="h-32 md:h-40 lg:h-52 w-auto drop-shadow-lg"
             />
           </div>
 
@@ -35,7 +30,7 @@ export function HeroSection() {
             className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground animate-slide-up"
             style={{ animationDelay: "0.1s" }}
           >
-            <span className="text-gradient-neon">ARISMA</span>
+            ARISMA
           </h1>
 
           {/* Tagline */}
@@ -55,7 +50,7 @@ export function HeroSection() {
             <Button
               asChild
               size="lg"
-              className="btn-neon rounded-full px-8 group"
+              className="btn-primary rounded-full px-8 group"
             >
               <Link to="/kegiatan">
                 <Calendar className="mr-2 h-5 w-5" />
@@ -67,7 +62,7 @@ export function HeroSection() {
               asChild
               size="lg"
               variant="outline"
-              className="border-primary/50 text-foreground hover:bg-primary/10 hover:border-primary rounded-full px-8 transition-all duration-300"
+              className="border-accent text-foreground hover:bg-accent hover:text-accent-foreground rounded-full px-8 transition-all duration-300"
             >
               <Link to="/galeri">
                 <Image className="mr-2 h-5 w-5" />
@@ -76,7 +71,7 @@ export function HeroSection() {
             </Button>
           </div>
 
-          {/* Stats with Neon Border */}
+          {/* Stats */}
           <div
             className="grid grid-cols-3 gap-4 md:gap-8 pt-12 animate-fade-in"
             style={{ animationDelay: "0.6s" }}
@@ -88,20 +83,17 @@ export function HeroSection() {
             ].map((stat) => (
               <div 
                 key={stat.label} 
-                className="text-center p-4 md:p-6 rounded-2xl bg-card shadow-card"
+                className="text-center p-4 md:p-6 rounded-2xl content-card"
               >
-                <div className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-blue-custom-deep">
+                <div className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-accent">
                   {stat.value}
                 </div>
-                <div className="text-xs md:text-sm text-muted-foreground mt-1">{stat.label}</div>
+                <div className="text-xs md:text-sm text-card-foreground/70 mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </div>
-
-      {/* Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-card to-transparent" />
     </section>
   );
 }

@@ -33,16 +33,13 @@ export function AboutTeaser() {
   const currentLogo = resolvedTheme === "dark" ? logoDark : logoLight;
 
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[150px]" />
-      
-      <div className="container px-4 relative z-10">
+    <section className="py-16 md:py-24">
+      <div className="container px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div className="order-2 lg:order-1">
             <h2 className="section-title mb-4">
-              Tentang <span className="text-gradient-neon">ARISMA</span>
+              Tentang ARISMA
             </h2>
             <p className="text-muted-foreground mb-6 leading-relaxed">
               ARISMA (Aktivitas Remaja Islam Masjid 'Amru Bin 'Ash) adalah wadah
@@ -60,16 +57,16 @@ export function AboutTeaser() {
               {features.map((feature) => (
                 <div
                   key={feature.title}
-                  className="flex items-start gap-3 p-4 rounded-xl bg-card border border-border/50 card-neon"
+                  className="flex items-start gap-3 p-4 rounded-xl content-card"
                 >
                   <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
                     <feature.icon className="h-5 w-5 text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground text-sm">
+                    <h4 className="font-semibold text-card-foreground text-sm">
                       {feature.title}
                     </h4>
-                    <p className="text-xs text-muted-foreground mt-0.5">
+                    <p className="text-xs text-card-foreground/70 mt-0.5">
                       {feature.description}
                     </p>
                   </div>
@@ -77,7 +74,7 @@ export function AboutTeaser() {
               ))}
             </div>
 
-            <Button asChild className="btn-neon rounded-full px-8 group">
+            <Button asChild className="btn-primary rounded-full px-8 group">
               <Link to="/tentang-kami">
                 Selengkapnya
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -87,14 +84,11 @@ export function AboutTeaser() {
 
           {/* Image */}
           <div className="order-1 lg:order-2 flex justify-center">
-            <div className="relative">
-              <div className="absolute inset-0 bg-accent/30 rounded-full blur-[80px] animate-glow-pulse" />
-              <img
-                src={currentLogo}
-                alt="ARISMA"
-                className="relative w-64 md:w-80 lg:w-96 h-auto drop-shadow-2xl"
-              />
-            </div>
+            <img
+              src={currentLogo}
+              alt="ARISMA"
+              className="w-64 md:w-80 lg:w-96 h-auto drop-shadow-lg"
+            />
           </div>
         </div>
       </div>
