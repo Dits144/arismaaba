@@ -61,11 +61,11 @@ export default {
           light: "hsl(var(--gold-light))",
           dark: "hsl(var(--gold-dark))",
         },
-        "green-custom": {
-          deep: "hsl(var(--green-deep))",
-          dark: "hsl(var(--green-dark))",
-          darker: "hsl(var(--green-darker))",
-          light: "hsl(var(--green-light))",
+        "blue-custom": {
+          deep: "hsl(var(--blue-deep))",
+          dark: "hsl(var(--blue-dark))",
+          teal: "hsl(var(--blue-teal))",
+          light: "hsl(var(--blue-light))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

@@ -8,6 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import logoArisma from "@/assets/logo-arisma.png";
 
 const navItems = [
@@ -81,8 +82,9 @@ export function Navbar() {
             )}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
+          {/* Theme Toggle & CTA Button */}
+          <div className="hidden lg:flex items-center gap-2">
+            <ThemeToggle />
             <Button
               asChild
               className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-gold"
@@ -94,12 +96,15 @@ export function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-foreground hover:text-accent transition-colors"
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          <div className="lg:hidden flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 text-foreground hover:text-accent transition-colors"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
