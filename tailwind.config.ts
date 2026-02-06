@@ -56,16 +56,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-          dark: "hsl(var(--gold-dark))",
-        },
         "blue-custom": {
           deep: "hsl(var(--blue-deep))",
           dark: "hsl(var(--blue-dark))",
-          teal: "hsl(var(--blue-teal))",
-          light: "hsl(var(--blue-light))",
+        },
+        "green-custom": {
+          accent: "hsl(var(--green-accent))",
+          light: "hsl(var(--green-light))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -108,7 +105,6 @@ export default {
         "slide-up": "slide-up 0.6s ease-out forwards",
       },
       boxShadow: {
-        gold: "var(--shadow-gold)",
         card: "var(--shadow-card)",
         elevated: "var(--shadow-elevated)",
       },

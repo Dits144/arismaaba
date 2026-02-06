@@ -59,7 +59,7 @@ export function AboutTeaser() {
                   key={feature.title}
                   className="flex items-start gap-3 p-4 rounded-xl content-card"
                 >
-                  <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-accent/15 flex items-center justify-center shrink-0">
                     <feature.icon className="h-5 w-5 text-accent" />
                   </div>
                   <div>

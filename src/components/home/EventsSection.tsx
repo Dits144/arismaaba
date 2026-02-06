@@ -50,7 +50,7 @@ function isUpcoming(dateString: string) {
 
 export function EventsSection() {
   return (
-    <section className="py-16 md:py-24 bg-secondary/10">
+    <section className="py-16 md:py-24 bg-muted/30">
       <div className="container px-4">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
@@ -62,7 +62,7 @@ export function EventsSection() {
               Ikuti berbagai kegiatan menarik yang kami selenggarakan
             </p>
           </div>
-          <Button asChild variant="ghost" className="text-accent hover:text-accent/80 group hover:bg-accent/10">
+          <Button asChild variant="ghost" className="text-accent hover:text-accent hover:bg-accent/10 group">
             <Link to="/kegiatan">
               Lihat Semua
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -79,17 +79,17 @@ export function EventsSection() {
               className="animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <Card className="content-card h-full overflow-hidden group">
+              <Card className="content-card h-full overflow-hidden group border-0">
                 {/* Poster Placeholder */}
-                <div className="aspect-video bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center">
+                <div className="aspect-video bg-gradient-to-br from-primary/80 to-accent/60 flex items-center justify-center">
                   <Calendar className="h-12 w-12 text-white/60" />
                 </div>
                 <CardContent className="p-5">
                   <Badge
                     className={`mb-3 ${
                       isUpcoming(event.start_date)
-                        ? "bg-accent text-accent-foreground"
-                        : "bg-muted text-muted-foreground"
+                        ? "bg-accent/15 text-accent border-0"
+                        : "bg-muted text-muted-foreground border-0"
                     }`}
                   >
                     {isUpcoming(event.start_date) ? "Akan Datang" : "Selesai"}

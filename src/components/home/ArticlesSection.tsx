@@ -58,7 +58,7 @@ export function ArticlesSection() {
               Baca artikel dan informasi seputar kegiatan keislaman
             </p>
           </div>
-          <Button asChild variant="ghost" className="text-accent hover:text-accent/80 group hover:bg-accent/10">
+          <Button asChild variant="ghost" className="text-accent hover:text-accent hover:bg-accent/10 group">
             <Link to="/artikel">
               Lihat Semua
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -75,13 +75,13 @@ export function ArticlesSection() {
               className="animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <Card className="content-card h-full overflow-hidden group">
+              <Card className="content-card h-full overflow-hidden group border-0">
                 {/* Thumbnail Placeholder */}
-                <div className="aspect-video bg-gradient-to-br from-secondary via-accent to-primary flex items-center justify-center">
+                <div className="aspect-video bg-gradient-to-br from-accent/60 to-primary/80 flex items-center justify-center">
                   <Tag className="h-12 w-12 text-white/60" />
                 </div>
                 <CardContent className="p-5">
-                  <Badge variant="outline" className="mb-3 border-accent text-accent">
+                  <Badge variant="outline" className="mb-3 border-accent/30 text-accent bg-accent/10">
                     {article.category}
                   </Badge>
                   <h3 className="font-display text-lg font-semibold text-card-foreground mb-2 group-hover:text-accent transition-colors line-clamp-2">
