@@ -45,19 +45,11 @@ export function Navbar() {
             <img 
               src={currentLogo} 
               alt="ARISMA" 
-              className="h-12 md:h-14 w-auto transition-transform duration-300 group-hover:scale-105" 
+              className="h-10 md:h-12 w-auto transition-transform duration-300 group-hover:scale-105" 
             />
-            <div className="hidden sm:flex flex-col">
-              <span className="text-lg font-display font-bold text-foreground leading-tight">
-                ARISMA
-              </span>
-              <span className="text-[10px] md:text-xs text-muted-foreground leading-tight">
-                Aktivitas Remaja Islam
-              </span>
-              <span className="text-[10px] md:text-xs text-muted-foreground leading-tight">
-                Masjid 'Amru Bin 'Ash
-              </span>
-            </div>
+            <span className="hidden sm:block text-lg font-display font-bold text-foreground">
+              ARISMA
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
