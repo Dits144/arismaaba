@@ -41,20 +41,15 @@ export function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
+          <Link to="/" className="flex items-center gap-3 group">
             <img 
               src={currentLogo} 
               alt="ARISMA" 
               className="h-10 md:h-12 w-auto transition-transform duration-300 group-hover:scale-105" 
             />
-            <div className="hidden sm:flex flex-col leading-tight">
-              <span className="text-base font-display font-bold text-foreground">
-                ARISMA
-              </span>
-              <span className="text-[10px] text-muted-foreground truncate max-w-[140px]">
-                Aktivitas Remaja Islam Masjid 'Amru Bin 'Ash
-              </span>
-            </div>
+            <span className="hidden sm:block text-lg font-display font-bold text-foreground">
+              ARISMA
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

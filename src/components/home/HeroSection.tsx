@@ -21,9 +21,26 @@ export function HeroSection() {
             <img
               src={currentLogo}
               alt="ARISMA - Aktivitas Remaja Islam Masjid 'Amru Bin 'Ash"
-              className="h-48 md:h-64 lg:h-80 w-auto drop-shadow-lg"
+              className="h-32 md:h-40 lg:h-52 w-auto drop-shadow-lg"
             />
           </div>
+
+          {/* Title */}
+          <h1 
+            className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground animate-slide-up"
+            style={{ animationDelay: "0.1s" }}
+          >
+            ARISMA
+          </h1>
+
+          {/* Tagline */}
+          <p
+            className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mx-auto animate-slide-up"
+            style={{ animationDelay: "0.2s" }}
+          >
+            Wadah pembinaan remaja muslim yang berakhlak mulia, berilmu, dan
+            bermanfaat bagi umat di Masjid 'Amru Bin 'Ash
+          </p>
 
           {/* CTA Buttons */}
           <div
