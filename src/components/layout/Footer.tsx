@@ -1,13 +1,9 @@
 import { Link } from "react-router-dom";
 import { Instagram, Mail, Phone, MapPin } from "lucide-react";
-import { useTheme } from "next-themes";
 import logoDark from "@/assets/logo-dark.png";
-import logoLight from "@/assets/logo-light.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-  const { resolvedTheme } = useTheme();
-  const currentLogo = resolvedTheme === "dark" ? logoDark : logoLight;
 
   return (
     <footer className="bg-primary text-white">
@@ -48,7 +44,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-sm text-white/70 hover:text-white transition-colors"
+                    className="text-sm text-white/70 hover:text-accent transition-colors"
                   >
                     {link.label}
                   </Link>

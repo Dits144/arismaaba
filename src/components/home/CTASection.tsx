@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export function CTASection() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-primary via-secondary to-accent">
+    <section className="py-16 md:py-24 bg-primary">
       <div className="container px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-display">
@@ -17,7 +17,7 @@ export function CTASection() {
             <Button
               asChild
               size="lg"
-              className="bg-white text-primary hover:bg-white/90 rounded-full px-8 w-full sm:w-auto font-semibold"
+              className="bg-accent hover:bg-accent/90 text-white rounded-full px-8 w-full sm:w-auto font-semibold"
             >
               <a
                 href="https://wa.me/6281234567890"
@@ -32,7 +32,7 @@ export function CTASection() {
               asChild
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white/10 rounded-full px-8 w-full sm:w-auto"
+              className="border-white/50 text-white hover:bg-white/10 rounded-full px-8 w-full sm:w-auto"
             >
               <a href="mailto:arismaaba19@gmail.com">
                 <Mail className="mr-2 h-5 w-5" />

@@ -8,7 +8,7 @@
   :root {
     /* ARISMA Light Mode - Clean & Professional */
     --background: 0 0% 96%; /* #F4F4F4 */
-    --foreground: 212 74% 18%; /* Deep blue text */
+    --foreground: 212 74% 18%; /* #0C2B4E Deep blue text */
 
     --card: 0 0% 100%;
     --card-foreground: 212 74% 18%;
@@ -19,13 +19,13 @@
     --primary: 212 74% 18%; /* #0C2B4E */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 212 58% 25%; /* #1A3D64 */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%; /* #F4F4F4 */
+    --secondary-foreground: 212 74% 18%;
 
     --muted: 210 20% 92%;
     --muted-foreground: 212 40% 40%;
 
-    --accent: 197 56% 27%; /* #1D546C - Teal */
+    --accent: 152 35% 35%; /* Hijau kalem dari logo ARISMA */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 70% 50%;
@@ -33,52 +33,52 @@
 
     --border: 210 20% 88%;
     --input: 210 20% 92%;
-    --ring: 197 56% 27%;
+    --ring: 152 35% 35%;
 
     --radius: 0.75rem;
 
     /* Custom colors */
     --blue-deep: 212 74% 18%;
     --blue-dark: 212 58% 25%;
-    --blue-teal: 197 56% 27%;
-    --blue-light: 197 50% 45%;
+    --green-accent: 152 35% 35%;
+    --green-light: 152 30% 45%;
     
     /* Shadows */
-    --shadow-card: 0 4px 20px -4px hsla(212, 74%, 18%, 0.1);
-    --shadow-elevated: 0 8px 30px -8px hsla(212, 74%, 18%, 0.15);
+    --shadow-card: 0 4px 20px -4px hsla(212, 74%, 18%, 0.08);
+    --shadow-elevated: 0 10px 40px -8px hsla(212, 74%, 18%, 0.12);
 
     /* Sidebar */
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 212 74% 18%;
-    --sidebar-primary: 197 56% 27%;
+    --sidebar-primary: 152 35% 35%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 210 20% 96%;
     --sidebar-accent-foreground: 212 74% 18%;
     --sidebar-border: 210 20% 88%;
-    --sidebar-ring: 197 56% 27%;
+    --sidebar-ring: 152 35% 35%;
   }
 
   .dark {
-    /* ARISMA Dark Mode - Blue background with white cards */
+    /* ARISMA Dark Mode - Deep blue background with clean white cards */
     --background: 212 74% 18%; /* #0C2B4E */
     --foreground: 0 0% 96%; /* #F4F4F4 */
 
-    --card: 0 0% 96%; /* White cards */
+    --card: 0 0% 96%; /* #F4F4F4 White cards for contrast */
     --card-foreground: 212 74% 18%; /* Dark text on cards */
 
     --popover: 0 0% 96%;
     --popover-foreground: 212 74% 18%;
 
-    --primary: 197 56% 27%; /* Teal */
+    --primary: 212 74% 18%; /* Deep blue */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 212 58% 25%; /* #1A3D64 */
+    --secondary: 212 58% 25%; /* #1A3D64 Slightly lighter blue */
     --secondary-foreground: 0 0% 96%;
 
     --muted: 212 50% 25%;
     --muted-foreground: 210 20% 70%;
 
-    --accent: 197 56% 27%; /* Teal */
+    --accent: 152 35% 40%; /* Hijau kalem - sedikit lebih terang di dark mode */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 70% 50%;
@@ -86,21 +86,21 @@
 
     --border: 212 40% 30%;
     --input: 212 50% 22%;
-    --ring: 197 56% 27%;
+    --ring: 152 35% 40%;
 
     /* Shadows for dark mode */
-    --shadow-card: 0 4px 20px -4px hsla(0, 0%, 0%, 0.2);
-    --shadow-elevated: 0 8px 30px -8px hsla(0, 0%, 0%, 0.3);
+    --shadow-card: 0 8px 30px -8px hsla(0, 0%, 0%, 0.25);
+    --shadow-elevated: 0 15px 50px -12px hsla(0, 0%, 0%, 0.35);
 
     /* Sidebar dark */
     --sidebar-background: 212 70% 14%;
     --sidebar-foreground: 0 0% 96%;
-    --sidebar-primary: 197 56% 27%;
+    --sidebar-primary: 152 35% 40%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 212 50% 22%;
     --sidebar-accent-foreground: 0 0% 96%;
     --sidebar-border: 212 40% 30%;
-    --sidebar-ring: 197 56% 27%;
+    --sidebar-ring: 152 35% 40%;
   }
 }
 
@@ -135,18 +135,24 @@
     @apply text-lg text-muted-foreground max-w-2xl;
   }
 
-  /* Card styling */
+  /* Card styling - clean and professional */
   .content-card {
-    @apply bg-card rounded-xl shadow-[var(--shadow-card)] transition-all duration-300;
+    @apply bg-card rounded-xl transition-all duration-300;
+    box-shadow: var(--shadow-card);
   }
 
   .content-card:hover {
-    @apply shadow-[var(--shadow-elevated)] -translate-y-1;
+    box-shadow: var(--shadow-elevated);
+    @apply -translate-y-1;
   }
 
   /* Button styling */
   .btn-primary {
-    @apply bg-accent text-accent-foreground font-semibold transition-all duration-300 hover:opacity-90;
+    @apply bg-accent text-accent-foreground font-semibold transition-all duration-300;
+  }
+
+  .btn-primary:hover {
+    @apply opacity-90;
   }
 
   /* Navigation link */
@@ -163,18 +169,9 @@
     @apply w-full;
   }
 
-  /* Mosque silhouette for hero */
-  .mosque-bg::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 250px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 250' preserveAspectRatio='xMidYMax slice'%3E%3Cpath fill='%231A3D64' fill-opacity='0.4' d='M0 250V150c20-5 40-15 60-30 10-8 20-25 30-25s20 17 30 25c20 15 40 25 60 30v-25c5-15 15-35 30-45 8-5 15-8 25-8s17 3 25 8c15 10 25 30 30 45v25c20-5 40-15 60-30 10-8 20-25 30-25s20 17 30 25c20 15 40 25 60 30v-70l40-50 40 50v70c20-5 40-15 60-30 10-8 20-25 30-25s20 17 30 25c20 15 40 25 60 30v-25c5-15 15-35 30-45 8-5 15-8 25-8s17 3 25 8c15 10 25 30 30 45v25c20-5 40-15 60-30 10-8 20-25 30-25s20 17 30 25c20 15 40 25 60 30v-70l40-50 40 50v70c20-5 40-15 60-30 10-8 20-25 30-25s20 17 30 25c20 15 40 25 60 30V250H0z'/%3E%3C/svg%3E") no-repeat bottom center;
-    background-size: cover;
-    pointer-events: none;
-    z-index: 0;
+  /* Badge styling */
+  .badge-green {
+    @apply bg-accent/15 text-accent font-medium;
   }
 }
 

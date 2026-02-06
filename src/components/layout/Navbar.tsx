@@ -37,7 +37,7 @@ export function Navbar() {
   const currentLogo = resolvedTheme === "dark" ? logoDark : logoLight;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
@@ -47,7 +47,7 @@ export function Navbar() {
               alt="ARISMA" 
               className="h-10 md:h-12 w-auto transition-transform duration-300 group-hover:scale-105" 
             />
-            <span className="hidden sm:block text-lg font-display font-bold text-accent neon-text">
+            <span className="hidden sm:block text-lg font-display font-bold text-foreground">
               ARISMA
             </span>
           </Link>
@@ -68,7 +68,7 @@ export function Navbar() {
                       <DropdownMenuItem key={child.href} asChild>
                         <Link
                           to={child.href}
-                          className={`w-full ${isActive(child.href) ? "text-accent" : ""}`}
+                          className={`w-full ${isActive(child.href) ? "text-accent font-medium" : ""}`}
                         >
                           {child.label}
                         </Link>
@@ -81,7 +81,7 @@ export function Navbar() {
                   key={item.href}
                   to={item.href!}
                   className={`nav-link px-4 py-2 text-sm font-medium ${
-                    isActive(item.href!) ? "text-accent neon-text" : ""
+                    isActive(item.href!) ? "text-accent font-semibold" : ""
                   }`}
                 >
                   {item.label}
@@ -95,7 +95,7 @@ export function Navbar() {
             <ThemeToggle />
             <Button
               asChild
-              className="btn-neon rounded-full px-6"
+              className="btn-primary rounded-full px-6"
             >
               <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">
                 Gabung ARISMA
@@ -132,7 +132,7 @@ export function Navbar() {
                         onClick={() => setIsOpen(false)}
                         className={`block px-8 py-2 text-sm ${
                           isActive(child.href)
-                            ? "text-accent"
+                            ? "text-accent font-medium"
                             : "text-foreground/80 hover:text-accent"
                         }`}
                       >
@@ -158,7 +158,7 @@ export function Navbar() {
               <div className="px-4 pt-4">
                 <Button
                   asChild
-                  className="w-full btn-neon rounded-full"
+                  className="w-full btn-primary rounded-full"
                 >
                   <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">
                     Gabung ARISMA

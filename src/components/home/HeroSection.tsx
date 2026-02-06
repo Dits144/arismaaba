@@ -10,9 +10,9 @@ export function HeroSection() {
   const currentLogo = resolvedTheme === "dark" ? logoDark : logoLight;
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden mosque-bg">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/20" />
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-muted/30" />
 
       <div className="container relative z-10 px-4 py-20 md:py-32">
         <div className="max-w-4xl mx-auto text-center space-y-8">
@@ -62,7 +62,7 @@ export function HeroSection() {
               asChild
               size="lg"
               variant="outline"
-              className="border-accent text-foreground hover:bg-accent hover:text-accent-foreground rounded-full px-8 transition-all duration-300"
+              className="border-accent text-accent hover:bg-accent hover:text-accent-foreground rounded-full px-8 transition-all duration-300"
             >
               <Link to="/galeri">
                 <Image className="mr-2 h-5 w-5" />
