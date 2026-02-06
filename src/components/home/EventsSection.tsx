@@ -50,7 +50,7 @@ function isUpcoming(dateString: string) {
 
 export function EventsSection() {
   return (
-    <section className="py-16 md:py-24 bg-card/50">
+    <section className="py-16 md:py-24 bg-muted/30">
       <div className="container px-4">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
@@ -62,7 +62,7 @@ export function EventsSection() {
               Ikuti berbagai kegiatan menarik yang kami selenggarakan
             </p>
           </div>
-          <Button asChild variant="ghost" className="text-accent hover:text-accent/80 group hover:bg-accent/10">
+          <Button asChild variant="ghost" className="text-primary hover:text-primary/80 group hover:bg-primary/10">
             <Link to="/kegiatan">
               Lihat Semua
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -79,24 +79,24 @@ export function EventsSection() {
               className="animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <Card className="card-neon h-full overflow-hidden group">
+              <Card className="glass-card h-full overflow-hidden group border-border/30">
                 {/* Poster Placeholder */}
-                <div className="aspect-video bg-gradient-to-br from-accent/20 via-secondary/20 to-primary/30 flex items-center justify-center relative overflow-hidden">
+                <div className="aspect-video bg-gradient-to-br from-primary/20 via-secondary/15 to-muted/30 flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-50" />
-                  <Calendar className="h-12 w-12 text-accent/60" />
+                  <Calendar className="h-12 w-12 text-primary/50" />
                 </div>
                 <CardContent className="p-5">
                   <Badge
                     variant={isUpcoming(event.start_date) ? "default" : "secondary"}
                     className={`mb-3 ${
                       isUpcoming(event.start_date)
-                        ? "bg-accent text-accent-foreground neon-glow-sm"
+                        ? "bg-primary text-primary-foreground"
                         : "bg-muted text-muted-foreground"
                     }`}
                   >
                     {isUpcoming(event.start_date) ? "Akan Datang" : "Selesai"}
                   </Badge>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-accent transition-colors line-clamp-2">
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
                     {event.title}
                   </h3>
                   <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
@@ -104,11 +104,11 @@ export function EventsSection() {
                   </p>
                   <div className="flex flex-col gap-1 text-sm text-muted-foreground">
                     <div className="flex items-center gap-2">
-                      <Calendar className="h-4 w-4 text-accent" />
+                      <Calendar className="h-4 w-4 text-primary" />
                       <span>{formatDate(event.start_date)}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4 text-accent" />
+                      <MapPin className="h-4 w-4 text-primary" />
                       <span className="line-clamp-1">{event.location}</span>
                     </div>
                   </div>
