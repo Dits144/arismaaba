@@ -78,24 +78,23 @@ export function ArticlesSection() {
               className="animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <Card className="glass-card h-full overflow-hidden group border-border/30">
+              <Card className="bg-card h-full overflow-hidden group shadow-card rounded-xl">
                 {/* Thumbnail Placeholder */}
-                <div className="aspect-video bg-gradient-to-br from-secondary/20 via-primary/15 to-muted/30 flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-50" />
-                  <Tag className="h-12 w-12 text-primary/50" />
+                <div className="aspect-video bg-gradient-to-br from-blue-custom-deep/80 via-blue-custom-teal/60 to-blue-custom-dark/70 flex items-center justify-center relative overflow-hidden">
+                  <Tag className="h-12 w-12 text-white/60" />
                 </div>
                 <CardContent className="p-5">
-                  <Badge variant="outline" className="mb-3 border-primary/50 text-primary">
+                  <Badge variant="outline" className="mb-3 border-blue-custom-teal text-blue-custom-teal">
                     {article.category}
                   </Badge>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                  <h3 className="font-display text-lg font-semibold text-card-foreground mb-2 group-hover:text-blue-custom-teal transition-colors line-clamp-2">
                     {article.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+                  <p className="text-sm text-card-foreground/70 mb-3 line-clamp-2">
                     {article.excerpt}
                   </p>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Clock className="h-4 w-4 text-primary" />
+                  <div className="flex items-center gap-2 text-sm text-card-foreground/60">
+                    <Clock className="h-4 w-4 text-blue-custom-teal" />
                     <span>{formatDate(article.published_at)}</span>
                   </div>
                 </CardContent>

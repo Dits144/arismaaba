@@ -78,24 +78,24 @@
   }
 
   .dark {
-    /* ARISMA Theme - Dark Mode - Professional Islamic Blue */
+    /* ARISMA Theme - Dark Mode - Professional Islamic Blue with F4F4F4 contrast */
     --background: 212 74% 18%;
-    --foreground: 210 20% 95%;
+    --foreground: 0 0% 96%; /* F4F4F4 */
 
-    --card: 212 65% 22%;
-    --card-foreground: 210 20% 95%;
+    --card: 0 0% 96%; /* F4F4F4 - White cards for contrast */
+    --card-foreground: 212 74% 18%;
 
-    --popover: 212 70% 20%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 0 0% 96%;
+    --popover-foreground: 212 74% 18%;
 
     --primary: 197 70% 55%;
-    --primary-foreground: 212 74% 12%;
+    --primary-foreground: 0 0% 96%;
 
-    --secondary: 197 56% 35%;
-    --secondary-foreground: 210 20% 95%;
+    --secondary: 212 65% 25%;
+    --secondary-foreground: 0 0% 96%;
 
     --muted: 212 50% 28%;
-    --muted-foreground: 210 20% 70%;
+    --muted-foreground: 210 20% 75%;
 
     --accent: 197 80% 60%;
     --accent-foreground: 212 74% 12%;
@@ -103,7 +103,7 @@
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 212 50% 30%;
+    --border: 212 40% 35%;
     --input: 212 60% 25%;
     --ring: 197 70% 55%;
 
@@ -115,21 +115,21 @@
     --islamic-pattern: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231D546C' fill-opacity='0.08'%3E%3Cpath d='M30 0l30 30-30 30L0 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     
     --gradient-hero: linear-gradient(180deg, hsl(212 74% 18%) 0%, hsl(212 65% 22%) 50%, hsl(197 56% 27%) 100%);
-    --gradient-card: linear-gradient(145deg, hsla(212, 65%, 26%, 0.8) 0%, hsla(212, 70%, 20%, 0.9) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 96%) 0%, hsl(210 20% 92%) 100%);
     --gradient-neon: linear-gradient(135deg, hsl(197 70% 55%) 0%, hsl(185 70% 50%) 50%, hsl(197 60% 45%) 100%);
 
     --shadow-neon: 0 0 20px hsla(197, 70%, 55%, 0.3), 0 0 40px hsla(197, 70%, 55%, 0.15);
     --shadow-neon-sm: 0 0 10px hsla(197, 70%, 55%, 0.25);
-    --shadow-card: 0 4px 24px -4px hsla(212, 74%, 10%, 0.5);
-    --shadow-elevated: 0 8px 32px -8px hsla(212, 74%, 8%, 0.6);
+    --shadow-card: 0 4px 24px -4px hsla(212, 74%, 10%, 0.3);
+    --shadow-elevated: 0 8px 32px -8px hsla(212, 74%, 8%, 0.4);
 
     /* Sidebar dark */
     --sidebar-background: 212 70% 16%;
-    --sidebar-foreground: 210 20% 95%;
+    --sidebar-foreground: 0 0% 96%;
     --sidebar-primary: 197 70% 55%;
-    --sidebar-primary-foreground: 212 74% 12%;
+    --sidebar-primary-foreground: 0 0% 96%;
     --sidebar-accent: 212 50% 28%;
-    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-accent-foreground: 0 0% 96%;
     --sidebar-border: 212 50% 30%;
     --sidebar-ring: 197 70% 55%;
   }
