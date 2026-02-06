@@ -12,7 +12,7 @@ export function Footer() {
   return (
     <footer className="bg-card border-t border-border/50 relative overflow-hidden">
       {/* Background glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-accent/5 rounded-full blur-[100px]" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-primary/5 rounded-full blur-[100px]" />
       
       <div className="container mx-auto px-4 py-12 md:py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -21,7 +21,7 @@ export function Footer() {
             <Link to="/" className="flex items-center gap-3 group">
               <img src={currentLogo} alt="ARISMA" className="h-12 w-auto transition-transform duration-300 group-hover:scale-105" />
               <div>
-                <span className="block text-xl font-display font-bold text-accent neon-text">
+                <span className="block text-xl font-display font-bold text-primary">
                   ARISMA
                 </span>
                 <span className="block text-xs text-muted-foreground">
@@ -51,7 +51,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-sm text-muted-foreground hover:text-accent transition-colors"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -67,7 +67,7 @@ export function Footer() {
             </h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 mt-0.5 text-accent shrink-0" />
+                <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" />
                 <span>
                   Masjid 'Amru Bin 'Ash
                   <br />
@@ -75,16 +75,16 @@ export function Footer() {
                 </span>
               </li>
               <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4 text-accent shrink-0" />
-                <a href="tel:+6281234567890" className="hover:text-accent transition-colors">
+                <Phone className="h-4 w-4 text-primary shrink-0" />
+                <a href="tel:+6281234567890" className="hover:text-primary transition-colors">
                   +62 812-3456-7890
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                <Mail className="h-4 w-4 text-accent shrink-0" />
+                <Mail className="h-4 w-4 text-primary shrink-0" />
                 <a
                   href="mailto:arismaaba19@gmail.com"
-                  className="hover:text-accent transition-colors"
+                  className="hover:text-primary transition-colors"
                 >
                   arismaaba19@gmail.com
                 </a>
@@ -102,7 +102,7 @@ export function Footer() {
                 href="https://instagram.com/arisma_aba"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:shadow-[0_0_15px_hsla(160,100%,50%,0.4)]"
+                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               >
                 <Instagram className="h-5 w-5" />
               </a>

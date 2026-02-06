@@ -48,7 +48,7 @@ export function ArticlesSection() {
   return (
     <section className="py-16 md:py-24 relative overflow-hidden">
       {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[150px]" />
       
       <div className="container px-4 relative z-10">
         {/* Header */}
@@ -61,7 +61,7 @@ export function ArticlesSection() {
               Baca artikel dan informasi seputar kegiatan keislaman
             </p>
           </div>
-          <Button asChild variant="ghost" className="text-accent hover:text-accent/80 group hover:bg-accent/10">
+          <Button asChild variant="ghost" className="text-primary hover:text-primary/80 group hover:bg-primary/10">
             <Link to="/artikel">
               Lihat Semua
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -78,24 +78,24 @@ export function ArticlesSection() {
               className="animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <Card className="card-neon h-full overflow-hidden group">
+              <Card className="glass-card h-full overflow-hidden group border-border/30">
                 {/* Thumbnail Placeholder */}
-                <div className="aspect-video bg-gradient-to-br from-secondary/30 via-accent/20 to-primary/30 flex items-center justify-center relative overflow-hidden">
+                <div className="aspect-video bg-gradient-to-br from-secondary/20 via-primary/15 to-muted/30 flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-50" />
-                  <Tag className="h-12 w-12 text-accent/60" />
+                  <Tag className="h-12 w-12 text-primary/50" />
                 </div>
                 <CardContent className="p-5">
-                  <Badge variant="outline" className="mb-3 border-accent/50 text-accent">
+                  <Badge variant="outline" className="mb-3 border-primary/50 text-primary">
                     {article.category}
                   </Badge>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-accent transition-colors line-clamp-2">
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
                     {article.title}
                   </h3>
                   <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
                     {article.excerpt}
                   </p>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Clock className="h-4 w-4 text-accent" />
+                    <Clock className="h-4 w-4 text-primary" />
                     <span>{formatDate(article.published_at)}</span>
                   </div>
                 </CardContent>

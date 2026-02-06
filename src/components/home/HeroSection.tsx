@@ -10,14 +10,14 @@ export function HeroSection() {
   const currentLogo = resolvedTheme === "dark" ? logoDark : logoLight;
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden hero-glow">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card" />
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden hero-glow mosque-bg">
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-[image:var(--gradient-hero)]" />
       
-      {/* Neon Decorative Elements */}
-      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-accent/10 rounded-full blur-[100px] animate-glow-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[120px]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px]" />
+      {/* Subtle Glow Elements */}
+      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/15 rounded-full blur-[100px]" />
+      <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[120px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/8 rounded-full blur-[150px]" />
 
       <div className="container relative z-10 px-4 py-20 md:py-32">
         <div className="max-w-4xl mx-auto text-center space-y-8">
@@ -30,12 +30,12 @@ export function HeroSection() {
             />
           </div>
 
-          {/* Title with Neon Effect */}
+          {/* Title */}
           <h1 
-            className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gradient-neon animate-slide-up"
+            className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground animate-slide-up"
             style={{ animationDelay: "0.1s" }}
           >
-            ARISMA
+            <span className="text-gradient-neon">ARISMA</span>
           </h1>
 
           {/* Tagline */}
@@ -67,7 +67,7 @@ export function HeroSection() {
               asChild
               size="lg"
               variant="outline"
-              className="border-accent/50 text-foreground hover:bg-accent/10 hover:border-accent rounded-full px-8 transition-all duration-300 hover:shadow-[0_0_20px_hsla(160,100%,50%,0.3)]"
+              className="border-primary/50 text-foreground hover:bg-primary/10 hover:border-primary rounded-full px-8 transition-all duration-300"
             >
               <Link to="/galeri">
                 <Image className="mr-2 h-5 w-5" />
@@ -88,9 +88,9 @@ export function HeroSection() {
             ].map((stat) => (
               <div 
                 key={stat.label} 
-                className="text-center p-4 md:p-6 rounded-2xl bg-card/50 border border-border/50 card-neon"
+                className="text-center p-4 md:p-6 rounded-2xl glass-card"
               >
-                <div className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-accent">
+                <div className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-primary">
                   {stat.value}
                 </div>
                 <div className="text-xs md:text-sm text-muted-foreground mt-1">{stat.label}</div>
