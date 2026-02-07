@@ -1,12 +1,16 @@
 import { MessageCircle, Mail, Heart, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MosqueSilhouette } from "@/components/decorative/MosqueSilhouette";
+import { MosqueBackgroundPattern } from "@/components/decorative/MosqueBackground";
 
 export function CTASection() {
   return (
     <section className="relative py-20 md:py-28 overflow-hidden">
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90" />
+      
+      {/* Mosque background pattern - more visible on dark bg */}
+      <MosqueBackgroundPattern className="text-white opacity-50" />
       
       {/* Decorative pattern */}
       <div className="absolute inset-0 opacity-10">

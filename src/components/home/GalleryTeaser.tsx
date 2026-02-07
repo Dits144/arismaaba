@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Image, Camera } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MosqueBackgroundPattern } from "@/components/decorative/MosqueBackground";
 
 // Placeholder gallery items
 const placeholderPhotos = [
@@ -17,6 +18,9 @@ export function GalleryTeaser() {
     <section className="relative py-20 md:py-28 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-muted/30 via-muted/50 to-background" />
+      
+      {/* Mosque background pattern */}
+      <MosqueBackgroundPattern className="text-primary" />
       
       {/* Decorative elements */}
       <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-accent/5 blur-3xl" />

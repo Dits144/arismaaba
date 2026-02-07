@@ -3,6 +3,7 @@ import { ArrowRight, Calendar, MapPin, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { MosqueBackgroundPattern } from "@/components/decorative/MosqueBackground";
 
 // Placeholder events for initial display
 const placeholderEvents = [
@@ -53,6 +54,9 @@ export function EventsSection() {
     <section className="relative py-20 md:py-28 overflow-hidden">
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-muted/50 via-muted/30 to-background" />
+      
+      {/* Mosque background pattern */}
+      <MosqueBackgroundPattern className="text-primary" />
       
       {/* Decorative elements */}
       <div className="absolute top-20 right-0 w-72 h-72 rounded-full bg-accent/5 blur-3xl" />
