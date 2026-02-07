@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import logoDark from "@/assets/logo-dark.png";
 import logoLight from "@/assets/logo-light.png";
+import { MosqueBackgroundPattern } from "@/components/decorative/MosqueBackground";
 
 const features = [
   {
@@ -40,6 +41,9 @@ export function AboutTeaser() {
     <section className="relative py-20 md:py-28 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-muted/20" />
+      
+      {/* Mosque background pattern */}
+      <MosqueBackgroundPattern className="text-accent" />
       
       {/* Decorative elements */}
       <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-accent/5 blur-3xl" />

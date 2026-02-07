@@ -7,6 +7,7 @@ import logoLight from "@/assets/logo-light.png";
 import { MosqueSilhouette } from "@/components/decorative/MosqueSilhouette";
 import { FloatingParticles } from "@/components/decorative/FloatingParticles";
 import { GeometricPattern } from "@/components/decorative/GeometricPattern";
+import { MosqueBackgroundPattern, FloatingMosques } from "@/components/decorative/MosqueBackground";
 
 export function HeroSection() {
   const { resolvedTheme } = useTheme();
@@ -16,6 +17,10 @@ export function HeroSection() {
     <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
       {/* Background layers */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-muted/50" />
+      
+      {/* Mosque background pattern */}
+      <MosqueBackgroundPattern className="text-foreground" />
+      <FloatingMosques />
       
       {/* Geometric pattern overlay */}
       <GeometricPattern className="absolute inset-0 text-accent opacity-30" />
