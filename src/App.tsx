@@ -16,6 +16,12 @@ import Galeri from "./pages/Galeri";
 import TentangKami from "./pages/TentangKami";
 import AdminLogin from "./pages/admin/Login";
 import AdminDashboard from "./pages/admin/Dashboard";
+import AdminKegiatan from "./pages/admin/AdminKegiatan";
+import AdminArtikel from "./pages/admin/AdminArtikel";
+import AdminGaleri from "./pages/admin/AdminGaleri";
+import AdminStruktur from "./pages/admin/AdminStruktur";
+import AdminPengaturan from "./pages/admin/AdminPengaturan";
+import AdminNotFound from "./pages/admin/AdminNotFound";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +47,12 @@ const App = () => (
             {/* Admin Routes */}
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/admin/kegiatan" element={<AdminKegiatan />} />
+            <Route path="/admin/artikel" element={<AdminArtikel />} />
+            <Route path="/admin/galeri" element={<AdminGaleri />} />
+            <Route path="/admin/struktur" element={<AdminStruktur />} />
+            <Route path="/admin/pengaturan" element={<AdminPengaturan />} />
+            <Route path="/admin/*" element={<AdminNotFound />} />
             
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />
