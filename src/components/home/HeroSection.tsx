@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Calendar, Image, Sparkles } from "lucide-react";
+import { ArrowRight, Calendar, Image, Sparkles, Users, CalendarDays, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import logoDark from "@/assets/logo-dark.png";
@@ -102,9 +102,9 @@ export function HeroSection() {
             style={{ animationDelay: "0.6s" }}
           >
             {[
-              { value: "50+", label: "Anggota Aktif", icon: "👥" },
-              { value: "20+", label: "Kegiatan/Tahun", icon: "📅" },
-              { value: "5+", label: "Program Rutin", icon: "⭐" },
+              { value: "50+", label: "Anggota Aktif", Icon: Users },
+              { value: "20+", label: "Kegiatan/Tahun", Icon: CalendarDays },
+              { value: "5+", label: "Program Rutin", Icon: Star },
             ].map((stat, index) => (
               <div 
                 key={stat.label} 
@@ -112,7 +112,9 @@ export function HeroSection() {
                 style={{ animationDelay: `${0.8 + index * 0.1}s` }}
               >
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="text-2xl mb-2">{stat.icon}</div>
+                <div className="flex justify-center mb-2">
+                  <stat.Icon className="h-6 w-6 text-accent" />
+                </div>
                 <div className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-accent relative">
                   {stat.value}
                 </div>
